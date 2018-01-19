@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { ShopPage } from './../shop/shop';
+
+//import { ShopPage } from './../shop/shop';
 import { UsersPage } from './../users/users';
 
 
@@ -10,7 +11,9 @@ import { UsersPage } from './../users/users';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  usrPage = UsersPage;
+  
+  /*
   constructor(public navCtrl: NavController) {
 
   }
@@ -22,5 +25,6 @@ export class HomePage {
   onGoToShop() {
     this.navCtrl.push(ShopPage);
   }
+  */
 
 }
