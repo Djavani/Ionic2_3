@@ -18,5 +18,40 @@ export class UsersPage {
     this.navCtrl.push(UserPage, {userName: name});
   }
 
+  ionViewCanEnter(): boolean | Promise<boolean> {
+    console.log('ionViewCanEnter');
+    const rnd = Math.random();
+    return rnd > 0.1;
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad');    
+  }
+
+  ionViewWillEnter() {
+    console.log('ionViewWillEnter');    
+  }
+  
+  ionViewDidEnter() {
+    console.log('ionViewDidEnter');    
+  }
+
+  ionionViewCanLeave(): boolean | Promise<void> {
+    const promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve();
+      }, 1000);
+    });
+   return promise;
+  }
+
+  ionViewWillLeave() {
+    console.log('ionViewWillLeave');    
+  }
+
+  ionViewDidLeave() {
+    console.log('ionViewDidLeave');    
+  }
+
 
 }

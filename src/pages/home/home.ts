@@ -5,7 +5,6 @@ import { NavController } from 'ionic-angular';
 //import { ShopPage } from './../shop/shop';
 import { UsersPage } from './../users/users';
 
-
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -13,18 +12,13 @@ import { UsersPage } from './../users/users';
 export class HomePage {
   usrPage = UsersPage;
   
-  /*
-  constructor(public navCtrl: NavController) {
+  
+  constructor(private navCtrl: NavController) {
 
   }
 
   onGoToUsers() {
-    this.navCtrl.push(UsersPage)
+    this.navCtrl.push(this.usrPage)
+    .catch((error) => console.log('Access denied, argument was ' + error));    
   }
-
-  onGoToShop() {
-    this.navCtrl.push(ShopPage);
-  }
-  */
-
 }
